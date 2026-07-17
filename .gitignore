@@ -1,0 +1,24 @@
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# QElectroTech backups
+*.qet~
+
+# Excel temporary files
+~$*.xls*
+*.tmp
+
+# Backup files
+*.bak
+*.backup
+
+# Programs - build artifacts (thêm sau nếu cần)
+*.exe
+*.o
+*.obj
+*.dll
+
+# Git commit template (local)
+.gitmessage
