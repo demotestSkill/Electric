@@ -1,3 +1,6 @@
+---
+tags: [shared, index]
+---
 # _Shared — Tài nguyên dùng chung
 
 [..](../README.md)

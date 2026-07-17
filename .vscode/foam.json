@@ -1,0 +1,15 @@
+{
+  "foam.graph": {
+    "forceLayout": true,
+    "showTagHierarchy": true,
+    "showTagsCount": true,
+    "showFileExtensions": false,
+    "showUnresolvedLinks": false,
+    "showAttachedNotes": true,
+    "showLocalLinksOnly": false
+  },
+  "foam.edit.linkReferenceDefinitions": "withExtensions",
+  "foam.preview": {
+    "showFrontmatter": true
+  }
+}
