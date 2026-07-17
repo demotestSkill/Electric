@@ -1,5 +1,3 @@
-# electrical — Bản vẽ điện QET
+# electrical - Ban ve dien QET
 
-[[..|Về Design]] ([../README.md](../README.md))
-
-Chứa file .qet từ QElectroTech.
+[..](../README.md)
