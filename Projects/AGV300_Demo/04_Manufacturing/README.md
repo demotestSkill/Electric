@@ -1,5 +1,3 @@
-# 04_Manufacturing — Sản xuất
+# 04_Manufacturing - San xuat
 
-[[..|Về dự án]] ([../README.md](../README.md))
-
-Tài liệu phục vụ sản xuất và lắp ráp.
+[..](../README.md)
