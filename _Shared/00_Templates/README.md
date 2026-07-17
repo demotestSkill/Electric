@@ -1,3 +1,6 @@
+---
+tags: [shared, templates]
+---
 # 00_Templates — Mẫu bản vẽ & tài liệu
 
 [..](../README.md)

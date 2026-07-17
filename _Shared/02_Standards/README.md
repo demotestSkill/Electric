@@ -1,3 +1,6 @@
+---
+tags: [shared, standards]
+---
 # 02_Standards — Tiêu chuẩn kỹ thuật
 
 [..](../README.md)
