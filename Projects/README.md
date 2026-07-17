@@ -1,6 +1,6 @@
 # Projects — Dự án
 
-Mỗi dự án có cấu trúc chuẩn như sau:
+Mỗi dự án có cấu trúc chuẩn như sau. File `00_Project_Index.csv` là bảng tra cứu liên kết giữa bản vẽ, BOM và code.
 
 ```
 Ten_Du_An/

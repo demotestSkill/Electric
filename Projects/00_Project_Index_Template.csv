@@ -1,0 +1,3 @@
+Component ID,Loại,Tên thiết bị,Drawings (file .qet),BOM (file .xlsx),Code (file),Ghi chú
+AGV300-MOTOR-001,Motor,Motor DC 24V,AGV300_01_MachDongLuc.qet,AGV300_BOM_v1.xlsx,AGV300_main_v1.c,Dẫn động bánh trái
+AGV300-PLC-001,PLC,Delta DVP14SS,AGV300_02_MachDieuKhien.qet,AGV300_BOM_v1.xlsx,AGV300_PLC_v1.scl,Tủ điều khiển chính
