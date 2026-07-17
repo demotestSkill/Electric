@@ -1,10 +1,8 @@
 ---
 tags: [shared, index]
 ---
-# _Shared — Tài nguyên dùng chung
+# _Shared - Tai nguyen dung chung
 
-[..](../README.md)
-
-- [[_Shared/00_Templates/README|00_Templates]] hoặc [00_Templates](00_Templates/README.md)
-- [[_Shared/01_Library/README|01_Library]] hoặc [01_Library](01_Library/README.md)
-- [[_Shared/02_Standards/README|02_Standards]] hoặc [02_Standards](02_Standards/README.md)
+- [[_Shared/00_Templates/README|00_Templates]] - Mau ban ve
+- [[_Shared/01_Library/README|01_Library]] - Linh kien
+- [[_Shared/02_Standards/README|02_Standards]] - Tieu chuan
