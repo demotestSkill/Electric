@@ -1,3 +1,6 @@
+---
+tags: [root]
+---
 # Electric
 
 Quản lý thiết kế điện, phần mềm và BOM cho các dự án AGV và Robot.
