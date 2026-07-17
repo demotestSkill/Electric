@@ -1,3 +1,6 @@
+---
+tags: [agv1000, project]
+---
 # AGV1000
 
 [..](../README.md)
