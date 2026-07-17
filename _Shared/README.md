@@ -1,10 +1,7 @@
-# _Shared — Tài nguyên dùng chung
+# _Shared � T�i nguy�n d�ng chung
 
-Các file dùng chung cho tất cả dự án.
+[[..|V? root]] ([..](../README.md))
 
-| Thư mục | Mục đích |
-|---------|----------|
-| `00_Templates/` | Mẫu bản vẽ QET (title block, template), mẫu BOM Excel |
-| `01_Library/` | Linh kiện điện (collection elements), macros QET |
-| `02_Standards/` | Tiêu chuẩn thiết kế, quy ước ký hiệu, quy định kỹ thuật |
-| `02_Standards/naming_convention.md` | Quy ước đặt tên linh kiện, file, và liên kết giữa bản vẽ-BOM-code |
+- [[00_Templates]] ho?c [00_Templates](00_Templates/README.md) � M?u b?n v? QET, BOM
+- [[01_Library]] ho?c [01_Library](01_Library/README.md) � Linh ki?n, macros
+- [[02_Standards]] ho?c [02_Standards](02_Standards/README.md) � Ti�u chu?n thi?t k?
