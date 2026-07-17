@@ -3,8 +3,6 @@ tags: [agv300-demo, software]
 ---
 # 03_Software - Phan mem
 
-[..](../README.md)
-
-- [[Projects/AGV300_Demo/03_Software/firmware/README|firmware]] hoac [firmware](firmware/README.md)
-- [[Projects/AGV300_Demo/03_Software/plc/README|plc]] hoac [plc](plc/README.md)
-- [[Projects/AGV300_Demo/03_Software/hmi/README|hmi]] hoac [hmi](hmi/README.md)
+- [[Projects/AGV300_Demo/03_Software/firmware/README|firmware]]
+- [[Projects/AGV300_Demo/03_Software/plc/README|plc]]
+- [[Projects/AGV300_Demo/03_Software/hmi/README|hmi]]
