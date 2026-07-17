@@ -1,5 +1,5 @@
-﻿# hmi - HMI
+# hmi — HMI
 
-Giao dien nguoi-may cho man hinh cam ung.
-- Hang HMI: Delta / Weintek
-- Phan mem: DOPSoft / EasyBuilder
+[[..|Về Software]] ([../README.md](../README.md))
+
+Giao diện người-máy. Delta / Weintek. DOPSoft / EasyBuilder.

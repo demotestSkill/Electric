@@ -1,4 +1,8 @@
-﻿# 02_Design - Thiet ke
+# 02_Design — Thiết kế
 
-- **electrical/** - Ban ve dien QElectroTech (.qet)
-- **bom/** - Bill of Materials (.xlsx)
+[[..|Về dự án]] ([../README.md](../README.md))
+
+| Thư mục | Mô tả | Link |
+|----------|-------|------|
+| electrical | Bản vẽ điện QET | [[electrical]] hoặc [electrical](electrical/README.md) |
+| bom | Bill of Materials | [[bom]] hoặc [bom](bom/README.md) |
