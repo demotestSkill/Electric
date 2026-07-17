@@ -3,11 +3,10 @@ tags: [root]
 ---
 # Electric
 
-Quản lý thiết kế điện, phần mềm và BOM cho các dự án AGV và Robot.
+Quan ly thiet ke dien, phan mem va BOM.
 
-## Tổng quan
-- [[_Shared/README|_Shared]] hoặc [_Shared](_Shared/README.md) — Tài nguyên dùng chung
-- [[Projects/README|Projects]] hoặc [Projects](Projects/README.md) — Dự án
+- [[_Shared/README|_Shared]] - Tai nguyen dung chung
+- [[Projects/README|Projects]] - Du an
 
-## Quy trình
-[[_Shared/02_Standards/naming_convention|Quy ước đặt tên]] hoặc [Quy ước đặt tên](_Shared/02_Standards/naming_convention.md)
+## Quy uoc
+[[_Shared/02_Standards/naming_convention|Quy uoc dat ten]]

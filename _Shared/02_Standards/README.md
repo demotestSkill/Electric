@@ -1,8 +1,6 @@
 ---
 tags: [shared, standards]
 ---
-# 02_Standards — Tiêu chuẩn kỹ thuật
+# 02_Standards - Tieu chuan ky thuat
 
-[..](../README.md)
-
-- [[_Shared/02_Standards/naming_convention|naming_convention]] hoặc [naming_convention](naming_convention.md)
+[[_Shared/02_Standards/naming_convention|naming_convention]]
