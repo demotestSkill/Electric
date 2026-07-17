@@ -1,5 +1,5 @@
-﻿# firmware
+# firmware
 
-Code firmware cho vi dieu khien (STM32, Arduino...).
-- Ngon ngu: C / C++
-- IDE: STM32CubeIDE / Arduino
+[[..|Về Software]] ([../README.md](../README.md))
+
+Firmware vi điều khiển (STM32, Arduino...). Ngôn ngữ: C / C++.
