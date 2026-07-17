@@ -4,24 +4,6 @@
     "showTagHierarchy": true,
     "showFileExtensions": false,
     "showUnresolvedLinks": false,
-    "showAttachedNotes": false,
-    "showLocalLinksOnly": false,
-    "exclude": [
-      "**/01_Requirements/*",
-      "**/02_Design/electrical/*",
-      "**/02_Design/bom/*",
-      "**/03_Software/firmware/*",
-      "**/03_Software/plc/*",
-      "**/03_Software/hmi/*",
-      "**/04_Manufacturing/*",
-      "**/05_Test/*",
-      "**/00_Templates/*",
-      "**/01_Library/*",
-      "**/02_Standards/naming_convention.md",
-      "**/00_Project_Index*.csv",
-      "**/.gitignore",
-      "**/.gitattributes",
-      "**/.editorconfig"
-    ]
+    "showAttachedNotes": false
   }
 }
