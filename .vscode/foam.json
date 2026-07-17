@@ -1,9 +1,19 @@
 {
   "foam.graph": {
-    "forceLayout": true,
+    "forceLayout": false,
     "showTagHierarchy": true,
     "showFileExtensions": false,
     "showUnresolvedLinks": false,
-    "showAttachedNotes": false
+    "showAttachedNotes": false,
+    "layout": {
+      "hierarchical": {
+        "enabled": true,
+        "direction": "LR",
+        "sortMethod": "directed",
+        "nodeSpacing": 150,
+        "treeSpacing": 200,
+        "levelSeparation": 100
+      }
+    }
   }
 }
