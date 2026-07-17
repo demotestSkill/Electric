@@ -1,7 +1,5 @@
-# 00_Templates � M?u b?n v? & t�i li?u
+# 00_Templates — Mẫu bản vẽ & tài liệu
 
-[[..|V? _Shared]] ([..](../README.md))
+[..](../README.md)
 
-Ch?a c�c file m?u d�ng chung cho t?t c? d? �n.
-
-- [[Projects|Thu m?c d? �n]] ([Projects](../../Projects/README.md))
+Chứa các file mẫu dùng chung cho tất cả dự án.
