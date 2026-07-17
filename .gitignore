@@ -7,7 +7,7 @@ $RECYCLE.BIN/
 ._*
 
 # === IDE ===
-.vscode/
+.vscode/*
 !.vscode/foam.json
 .idea/
 *.sln
