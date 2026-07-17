@@ -1,5 +1,5 @@
-# 01_Library � Thu vi?n linh ki?n
+# 01_Library — Thư viện linh kiện
 
-[[..|V? _Shared]] ([..](../README.md))
+[..](../README.md)
 
-Ch?a c�c collection elements, macros QET d�ng chung.
+Chứa các collection elements, macros QET dùng chung.
