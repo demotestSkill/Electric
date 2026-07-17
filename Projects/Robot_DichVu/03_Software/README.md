@@ -1,5 +1,9 @@
-﻿# 03_Software - Phan mem
+# 03_Software — Phần mềm
 
-- **firmware/** - Firmware vi dieu khien (C, C++)
-- **plc/** - Code PLC (Ladder, ST)
-- **hmi/** - Giao dien HMI (touch screen)
+[[..|Về dự án]] ([../README.md](../README.md))
+
+| Thư mục | Mô tả | Link |
+|----------|-------|------|
+| firmware | Firmware vi điều khiển | [[firmware]] hoặc [firmware](firmware/README.md) |
+| plc | PLC code | [[plc]] hoặc [plc](plc/README.md) |
+| hmi | HMI giao diện | [[hmi]] hoặc [hmi](hmi/README.md) |

@@ -1,6 +1,5 @@
-﻿# 01_Requirements
+# 01_Requirements — Yêu cầu kỹ thuật
 
-Chá»©a tÃ i liá»‡u yÃªu cáº§u ká»¹ thuáº­t, specifications cá»§a dá»± Ã¡n.
-- *.pdf - YÃªu cáº§u tá»« khÃ¡ch hÃ ng
-- *.docx - Spec chi tiáº¿t
-- *.md - Ghi chÃº ná»™i bá»™
+[[..|Về dự án]] ([../README.md](../README.md))
+
+Chứa tài liệu yêu cầu kỹ thuật, specifications của dự án.

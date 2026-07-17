@@ -1,4 +1,5 @@
-﻿# electrical - Ban ve dien QET
+# electrical — Bản vẽ điện QET
 
-Chua file ban ve thiet ke dien tu QElectroTech (.qet).
-Quy uoc dat ten: DU_AN_STT_MoTa.qet
+[[..|Về Design]] ([../README.md](../README.md))
+
+Chứa file .qet từ QElectroTech.

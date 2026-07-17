@@ -1,5 +1,5 @@
-﻿# plc - PLC Code
+# plc — PLC Code
 
-Code dieu khien PLC.
-- Hang PLC: Delta / Mitsubishi / Siemens
-- Ngon ngu: Ladder / ST / FBD
+[[..|Về Software]] ([../README.md](../README.md))
+
+Code điều khiển PLC. Delta / Mitsubishi / Siemens. Ladder / ST.

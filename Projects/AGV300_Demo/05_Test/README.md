@@ -1,6 +1,5 @@
-﻿# 05_Test - Kiem thu
+# 05_Test — Kiểm thử
 
-Ket qua kiem tra, bao cao test, bien ban nghiem thu.
-- *.pdf - Bao cao test
-- *.xlsx - Checklist kiem tra
-- *.md - Quy trinh test
+[[..|Về dự án]] ([../README.md](../README.md))
+
+Kết quả kiểm tra, báo cáo test, biên bản nghiệm thu.
