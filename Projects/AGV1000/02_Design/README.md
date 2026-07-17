@@ -1,8 +1,6 @@
-# 02_Design — Thiết kế
+# 02_Design - Thiet ke
 
-[[..|Về dự án]] ([../README.md](../README.md))
+[..](../README.md)
 
-| Thư mục | Mô tả | Link |
-|----------|-------|------|
-| electrical | Bản vẽ điện QET | [[electrical]] hoặc [electrical](electrical/README.md) |
-| bom | Bill of Materials | [[bom]] hoặc [bom](bom/README.md) |
+- [[Projects/AGV1000/02_Design/electrical/README|electrical]] hoac [electrical](electrical/README.md)
+- [[Projects/AGV1000/02_Design/bom/README|bom]] hoac [bom](bom/README.md)

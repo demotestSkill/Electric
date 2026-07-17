@@ -1,5 +1,3 @@
-# firmware
+# firmware - Firmware vi dieu khien
 
-[[..|Về Software]] ([../README.md](../README.md))
-
-Firmware vi điều khiển (STM32, Arduino...). Ngôn ngữ: C / C++.
+[..](../README.md)

@@ -1,5 +1,3 @@
-# 05_Test — Kiểm thử
+# 05_Test - Kiem thu
 
-[[..|Về dự án]] ([../README.md](../README.md))
-
-Kết quả kiểm tra, báo cáo test, biên bản nghiệm thu.
+[..](../README.md)
