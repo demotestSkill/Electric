@@ -1,24 +1,39 @@
-# Windows
+# === OS ===
+Windows
 Thumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+.DS_Store
+._*
 
-# QElectroTech backups
+# === IDE ===
+.vscode/
+.idea/
+*.sln
+*.suo
+*.user
+.vs/
+
+# === QElectroTech ===
 *.qet~
+*.bak
 
-# Excel temporary files
+# === Excel ===
 ~$*.xls*
 *.tmp
 
-# Backup files
-*.bak
-*.backup
-
-# Programs - build artifacts (thêm sau nếu cần)
+# === Code ===
 *.exe
 *.o
 *.obj
 *.dll
+*.log
+__pycache__/
+*.pyc
+node_modules/
+dist/
+build/
+.env
 
-# Git commit template (local)
+# === Git ===
 .gitmessage
