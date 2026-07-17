@@ -1,3 +1,6 @@
+---
+tags: [agv1000-demo, project]
+---
 # AGV1000_Demo
 
 [..](../README.md)

@@ -1,3 +1,6 @@
+---
+tags: [projects, index]
+---
 # Projects — Dự án
 
 [..](../README.md)
