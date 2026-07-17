@@ -1,5 +1,3 @@
-# 01_Requirements — Yêu cầu kỹ thuật
+# 01_Requirements - Yeu cau ky thuat
 
-[[..|Về dự án]] ([../README.md](../README.md))
-
-Chứa tài liệu yêu cầu kỹ thuật, specifications của dự án.
+[..](../README.md)

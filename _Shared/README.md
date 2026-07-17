@@ -1,7 +1,7 @@
-# _Shared — Tài nguyên dùng chung
+# _Shared â€” TÃ i nguyÃªn dÃ¹ng chung
 
-[[..|V? root]] ([..](../README.md))
+[..](../README.md)
 
-- [[00_Templates]] ho?c [00_Templates](00_Templates/README.md) — M?u b?n v? QET, BOM
-- [[01_Library]] ho?c [01_Library](01_Library/README.md) — Linh ki?n, macros
-- [[02_Standards]] ho?c [02_Standards](02_Standards/README.md) — Tiêu chu?n thi?t k?
+- [[_Shared/00_Templates/README|00_Templates]] hoáº·c [00_Templates](00_Templates/README.md)
+- [[_Shared/01_Library/README|01_Library]] hoáº·c [01_Library](01_Library/README.md)
+- [[_Shared/02_Standards/README|02_Standards]] hoáº·c [02_Standards](02_Standards/README.md)
