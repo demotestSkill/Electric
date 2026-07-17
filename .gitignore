@@ -19,3 +19,6 @@ $RECYCLE.BIN/
 *.o
 *.obj
 *.dll
+
+# Git commit template (local)
+.gitmessage
