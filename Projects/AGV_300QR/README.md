@@ -1,20 +1,19 @@
-﻿# AGV_300QR
+# AGV_300QR
 
-## MÃ´ táº£
-*MÃ´ táº£ dá»± Ã¡n táº¡i Ä‘Ã¢y*
+[[..|Về Projects]] ([../README.md](../README.md))
 
-## Cáº¥u trÃºc
+## Thông tin dự án
 
-- **01_Requirements** - YÃªu cáº§u ká»¹ thuáº­t, specifications
-- **02_Design/electrical** - Báº£n váº½ Ä‘iá»‡n QET (.qet)
-- **02_Design/bom** - Bill of Materials (.xlsx)
-- **03_Software/firmware** - Firmware (C, C++)
-- **03_Software/plc** - PLC code
-- **03_Software/hmi** - HMI giao diá»‡n
-- **04_Manufacturing** - TÃ i liá»‡u sáº£n xuáº¥t
-- **05_Test** - Kiá»ƒm thá»­
+- **Khách hàng:**
+- **Ngày bắt đầu:**
+- **Trạng thái:**
 
-## ThÃ´ng tin
-- KhÃ¡ch hÃ ng:
-- NgÃ y báº¯t Ä‘áº§u:
-- Tráº¡ng thÃ¡i:
+## Nội dung
+
+| Thư mục | Mô tả | Link |
+|----------|-------|------|
+| 01_Requirements | Yêu cầu kỹ thuật | [[01_Requirements]] hoặc [01_Requirements](01_Requirements/README.md) |
+| 02_Design | Thiết kế điện & BOM | [[02_Design]] hoặc [02_Design](02_Design/README.md) |
+| 03_Software | Firmware, PLC, HMI | [[03_Software]] hoặc [03_Software](03_Software/README.md) |
+| 04_Manufacturing | Sản xuất | [[04_Manufacturing]] hoặc [04_Manufacturing](04_Manufacturing/README.md) |
+| 05_Test | Kiểm thử | [[05_Test]] hoặc [05_Test](05_Test/README.md) |
