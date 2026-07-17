@@ -1,3 +1,6 @@
+---
+tags: [shared, standards, naming]
+---
 # Quy ước đặt tên & liên kết tài liệu
 
 ## 1. Mã linh kiện (Component ID)

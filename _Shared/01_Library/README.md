@@ -1,3 +1,6 @@
+---
+tags: [shared, library]
+---
 # 01_Library — Thư viện linh kiện
 
 [..](../README.md)
