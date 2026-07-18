@@ -1,0 +1,5 @@
+# Mặc định: tất cả PR cần review
+* @DungAGV
+
+# QET files cần review kỹ
+*.qet @DungAGV
