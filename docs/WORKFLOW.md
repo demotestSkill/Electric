@@ -81,6 +81,12 @@ Reviewer → mở QET, kiểm tra
 - Tạo PR vào main
 - Reviewer checkout nhánh, mở file bằng QElectroTech V0.100+ để kiểm tra
 - Approve → merge vào main
+- **3 kiểu merge trên GitHub:**
+  - **Create a merge commit** — giữ nguyên lịch sử feature branch
+  - **Squash and merge** — gộp tất cả commit thành 1
+  - **Rebase and merge** — lịch sử thẳng hàng, không commit merge
+- Sau merge: xóa feature branch (nút **Delete branch** hoặc `git push origin --delete feature/...`)
+- Hủy PR: bấm **Close pull request** ở cuối trang PR
 
 ### 5. Release
 - Sau mỗi lần merge lên main, tạo tag: `git tag v1.0`
