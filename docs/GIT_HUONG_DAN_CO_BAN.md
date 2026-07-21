@@ -205,9 +205,79 @@ Enginner **không** tự merge được, cần admin (anh) hoặc reviewer Appro
 
 ---
 
+## Lưu ý đặc thù dự án này
+
+### 1. Chuyển nhánh dự án phải dùng `-f`
+
+Vì mỗi dự án là **orphan branch** (nhánh độc lập, không chung lịch sử), nên khi chuyển từ `main` sang `AGV300_Demo` (hoặc ngược lại), Git báo lỗi:
+
+```
+error: The following untracked working tree files would be overwritten by checkout:
+        Projects/AGV300_Demo/...
+        _Shared/...
+Please move or remove them before you switch branches.
+```
+
+**Fix: dùng force checkout**
+
+```bash
+git checkout -f AGV300_Demo
+git lfs pull
+```
+
+Luôn dùng `-f` khi chuyển giữa `main` và các nhánh dự án.
+
+### 2. Git LFS là gì?
+
+File `.qet`, `.xlsx`, `.pdf`... là file lớn (có file 55 MB). Git LFS giúp quản lý file lớn mà không làm chậm repo.
+
+**Nếu không chạy `git lfs pull`**, file chỉ là text nhỏ chứa link, không mở được:
+```
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0edd76...
+size 55498236
+```
+
+**Nếu chạy `git lfs pull`**, file thật 55 MB được tải về, mở QET được.
+
+**Luôn chạy `git lfs pull` sau mỗi lần `git checkout`.**
+
+### 3. Lỡ tạo clone lồng nhau (thư mục `Electric/`)
+
+Khi clone repo, phải cd vào thư mục vừa clone rồi mới làm việc:
+
+```
+D:\Projects> git clone https://github.com/duz9x/Electric.git
+D:\Projects> cd Electric          ← vào đây
+D:\Projects\Electric> git checkout -f AGV300_Demo
+```
+
+Nếu clone xong mà không `cd Electric` rồi lại clone tiếp, sẽ tạo thư mục `Electric/` bên trong. Xóa bằng:
+
+**PowerShell:**
+```powershell
+Remove-Item -Recurse -Force Electric
+```
+**CMD (Command Prompt):**
+```cmd
+rmdir /s Electric
+```
+
+### 4. Các lỗi thường gặp
+
+| Lỗi | Nguyên nhân | Cách sửa |
+|-----|-------------|----------|
+| `untracked working tree files would be overwritten` | Chuyển nhánh giữa orphan branch | `git checkout -f <nhánh>` |
+| `git` not recognized | Chưa cài Git | Cài https://git-scm.com/ |
+| `git lfs: command not found` | Chưa cài Git LFS | `git lfs install` hoặc cài lại Git |
+| File `.qet` chỉ có vài dòng text | Chưa `git lfs pull` | `git lfs pull` |
+| File không thấy sau khi clone | Sai branch, đang ở `main` | `git checkout -f <tên-dự-án>` |
+| `A positional parameter cannot be found` | Dùng lệnh CMD trong PowerShell | Dùng `Remove-Item` thay vì `rmdir` |
+
 ## Mẹo
 
 1. **Clone một lần, không clone lại**: Sau khi clone, chỉ cần `git pull` để cập nhật
 2. **Commit thường xuyên**: Mỗi lần sửa xong một việc nhỏ → commit
 3. **Không sợ sai**: Trước khi làm thử nghiệm, tạo feature branch, nếu hỏng thì xóa nhánh đó đi
-4. **Git LFS**: File .qet, .xlsx được quản lý riêng (dung lượng lớn). Nếu mở file thấy link `.gitattributes` thay vì nội dung → chạy `git lfs pull`
+4. **Luôn `git lfs pull`** sau mỗi lần checkout để có file thật
+5. **Dùng `-f`** khi checkout giữa các nhánh dự án
