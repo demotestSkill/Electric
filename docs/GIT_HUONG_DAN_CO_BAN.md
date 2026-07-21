@@ -53,6 +53,25 @@ Mỗi commit có 1 mã ID riêng (VD: `dbb2ea3`).
 ### 5. Pull Request (yêu cầu gộp)
 Khi làm xong trên nhánh tạm, gửi yêu cầu gộp vào nhánh chính. Người khác review rồi mới được gộp.
 
+### 6. Ai làm gì? (3 vai trò)
+
+| Vai trò | Trách nhiệm |
+|---------|-------------|
+| **Engineer** | Sửa file .qet, commit, push, tạo Pull Request |
+| **Reviewer** | Checkout nhánh, mở QET kiểm tra, Approve hoặc yêu cầu sửa |
+| **Approver** (Admin) | Merge PR vào nhánh chính sau khi đã Approve, tag release |
+
+Luồng xử lý:
+
+```
+Engineer sửa file → tạo PR
+       ↓
+Reviewer mở QET kiểm tra
+       ↓
+  ├── Sai → gửi yêu cầu sửa → Engineer sửa lại
+  └── Đúng → Approve → Admin merge vào nhánh chính
+```
+
 ---
 
 ## Quy trình làm việc

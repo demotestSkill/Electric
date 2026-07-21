@@ -44,6 +44,24 @@ Mỗi dự án có branch riêng đóng vai trò là nhánh chính:
 | `Robot_AnNinh` | Dự án Robot an ninh |
 | `feature/add-battery-sample` | Ví dụ feature branch |
 
+## Phân vai
+
+| Vai trò | Người | Làm gì |
+|---------|-------|--------|
+| **Engineer** | Người sửa bản vẽ | Tạo feature branch → sửa file → commit → push → tạo PR |
+| **Reviewer** | Người kiểm tra | Checkout nhánh → mở QET → kiểm tra sơ đồ → Approve hoặc Reject |
+| **Approver** (Admin) | Chủ repo | Merge PR sau khi được Approve → tag release |
+
+**Luồng xử lý**:
+```
+Engineer → tạo PR
+    ↓
+Reviewer → mở QET, kiểm tra
+    ↓
+    ├── Sai → Reject → Engineer sửa lại → tạo PR mới
+    └── Đúng → Approve → Approver merge vào nhánh chính
+```
+
 ## Quy tắc
 
 ### 1. Branch
