@@ -102,6 +102,12 @@ main                    (templates, docs, shared)
 - PR phải được tạo trước khi merge
 - Reviewer checkout nhánh, mở QET V0.100+ kiểm tra
 - Approve xong mới được merge
+- **Quy trình review chi tiết:**
+  1. `git fetch` (tải danh sách branch mới)
+  2. `git checkout -f feature/...` (chuyển sang branch feature)
+  3. `git lfs pull` (tải file thật .qet)
+  4. Mở QET → File > Open → kiểm tra sơ đồ
+  5. Lên GitHub → Approve (Merge) hoặc Files changed → Comment + Close PR
 
 ### 5.5. 3 kiểu merge trên GitHub
 

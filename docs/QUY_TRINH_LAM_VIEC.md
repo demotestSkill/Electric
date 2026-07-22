@@ -300,23 +300,63 @@ Sau đó bấm nút xanh **"Create pull request"**.
 
 Sau khi PR được tạo, Admin (hoặc Reviewer) sẽ kiểm tra.
 
-**Các bước kiểm tra:**
+#### Bước 1 — Tải feature branch về máy
+
+Lên GitHub → vào Pull Request đó → nhìn tên branch feature (VD: `feature/add-battery`).
 
 ```bash
-# Bước 1: Chuyển sang feature branch
+# Lấy danh sách branch mới nhất từ GitHub (quan trọng: phải chạy fetch trước)
+git fetch
+
+# Chuyển sang branch feature của PR
 git checkout -f feature/add-battery
 
-# Bước 2: Tải file thật
+# Tải file thật .qet / .xlsx (Git LFS)
 git lfs pull
-
-# Bước 3: Mở file .qet bằng QElectroTech
-start "" "C:\Program Files\QElectroTech\bin\qelectrotech.exe"
-# → File > Open > chọn file .qet
 ```
 
-**Kết quả kiểm tra:**
-- **OK** → lên GitHub → vào PR → bấm **"Merge pull request"** → chọn kiểu merge
-- **Sai** → vào tab **"Files changed"** trong PR → comment vào dòng cần sửa → bấm **"Close pull request"** → Engineer sửa lại
+> **Giải thích:** `git fetch` tải danh sách branch mới từ GitHub về.
+> Nếu không chạy `git fetch`, có thể không thấy branch feature mới.
+> `git checkout -f feature/...` chuyển sang branch đó để xem.
+> `git lfs pull` tải file thật (nếu quên, file .qet chỉ 200 byte).
+
+#### Bước 2 — Mở QET kiểm tra
+
+```bash
+# Mở QElectroTech
+start "" "C:\Program Files\QElectroTech\bin\qelectrotech.exe"
+```
+
+Trong QET:
+1. **File > Open**
+2. Dẫn đến file .qet trong thư mục dự án (VD: `Projects/AGV300_Demo/02_Design/electrical/...`)
+3. Kiểm tra sơ đồ điện, font tiếng Việt, linh kiện...
+
+#### Bước 3 — Xác nhận kết quả
+
+**Trường hợp 1 — Đúng (merge):**
+1. Lên GitHub → vào Pull Request đó
+2. Kéo xuống cuối → thấy nút xanh **"Merge pull request"**
+3. Bấm vào ▼ bên cạnh để chọn kiểu merge (Create merge commit / Squash and merge / Rebase and merge)
+4. Bấm **"Confirm merge"**
+5. Sau khi merge xong → bấm nút **"Delete branch"** để xóa feature branch trên GitHub
+
+**Trường hợp 2 — Sai (reject):**
+1. Trong trang PR → bấm tab **"Files changed"**
+2. Hover vào dòng cần sửa → bấm nút **+** màu xanh để thêm comment
+3. Ghi rõ lỗi (VD: "Sai ký hiệu relay, cần đổi thành NC")
+4. Bấm **"Start a review"** → **"Submit review"**
+5. Sau đó kéo xuống cuối → bấm **"Close pull request"** để đóng PR
+6. Engineer sửa lại → commit → push → tạo PR mới
+
+#### Lưu ý khi review
+
+- Sau khi xem xong feature branch, nhớ **quay lại nhánh chính** để làm việc tiếp:
+  ```bash
+  git checkout -f AGV300_Demo
+  ```
+- Có thể xem danh sách tất cả PR đang chờ review tại:
+  https://github.com/demotestSkill/Electric/pulls
 
 ### 2.8. Merge sau khi approve (trên GitHub)
 
