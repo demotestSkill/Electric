@@ -46,19 +46,21 @@ main                    (templates, docs, shared)
 │  2. git pull                     (lấy bản mới nhất)      │
 │  3. git lfs pull                 (tải file thật .qet)    │
 │  4. git checkout -b feature/xyz  (tạo nhánh riêng)       │
-│  5. Sửa file .qet / .xlsx                                │
-│  6. git add <file>               (chọn file để commit)   │
-│  7. git commit -m "[Dự án] ..."  (chụp ảnh trạng thái)   │
-│  8. git push -u origin feature/xyz  (đẩy lên GitHub)     │
-│  9. Lên GitHub → tạo Pull Request                        │
+│  5. git lfs lock "Projects/.../*.qet"  (khóa file .qet)  │
+│  6. Sửa file .qet / .xlsx                                │
+│  7. git lfs unlock "Projects/.../*.qet" (mở khóa)         │
+│  8. git add <file>               (chọn file để commit)   │
+│  9. git commit -m "[Dự án] ..."  (chụp ảnh trạng thái)   │
+│ 10. git push -u origin feature/xyz  (đẩy lên GitHub)     │
+│ 11. Lên GitHub → tạo Pull Request                        │
 └──────────────────────┬──────────────────────────────────┘
                        ↓
 ┌──────────────────────┴──────────────────────────────────┐
 │                      REVIEWER (ADMIN)                    │
-│  10. git checkout -f feature/xyz                        │
-│  11. git lfs pull                                       │
-│  12. Mở QET → kiểm tra sơ đồ điện                       │
-│  13. Duyệt trên GitHub (Approve / Comment)               │
+│  12. git checkout -f feature/xyz                        │
+│  13. git lfs pull                                       │
+│  14. Mở QET → kiểm tra sơ đồ điện                       │
+│  15. Duyệt trên GitHub (Approve / Comment)               │
 └──────────────────────┬──────────────────────────────────┘
                        ↓
               ┌────────┴────────┐

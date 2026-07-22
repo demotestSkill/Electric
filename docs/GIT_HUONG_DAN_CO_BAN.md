@@ -226,7 +226,7 @@ Enginner **không** tự merge được, cần admin (anh) hoặc reviewer Appro
 
 ## Lưu ý đặc thù dự án này
 
-### 1. Chuyển nhánh dự án
+### 1. Chuyển nhánh dự án phải dùng `-f`
 
 Vì mỗi dự án là **orphan branch** (nhánh độc lập, không chung lịch sử), nên khi chuyển từ `main` sang `AGV300_Demo` (hoặc ngược lại), Git báo lỗi:
 
@@ -237,31 +237,14 @@ error: The following untracked working tree files would be overwritten by checko
 Please move or remove them before you switch branches.
 ```
 
-**Cách xử lý đúng (an toàn):**
+**Fix: dùng force checkout**
 
 ```bash
-# Bước 1: Commit hết thay đổi hiện tại
-git add <file>
-git commit -m "[...] Tạm thời"
-
-# Bước 2: Chuyển nhánh bình thường (không cần -f)
-git checkout AGV300_Demo
+git checkout -f AGV300_Demo
 git lfs pull
 ```
 
-**Nếu chưa muốn commit, có thể cất tạm:**
-
-```bash
-git stash                        # Cất thay đổi vào kho
-git checkout AGV300_Demo
-git lfs pull
-# ... làm việc khác ...
-git checkout <nhánh-cũ>
-git stash pop                    # Lấy lại thay đổi
-```
-
-> **Chỉ dùng `-f` (force) khi thực sự cần — ví dụ đã kiểm tra và chấp nhận mất thay đổi.**
-> `-f` sẽ âm thầm xóa file thay đổi chưa commit nếu quên save trước đó.
+Luôn dùng `-f` khi chuyển giữa `main` và các nhánh dự án.
 
 ### 2. Git LFS là gì?
 

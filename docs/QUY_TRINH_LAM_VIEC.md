@@ -220,23 +220,18 @@ Trước khi làm, phải lấy bản mới nhất từ GitHub về để không
 **Các lệnh:**
 
 ```bash
-# Bước 1: Commit hoặc cất tạm thay đổi hiện tại (nếu có)
-git status
-# Nếu có file chưa commit → git add + git commit, hoặc git stash
+# Bước 1: Chuyển sang nhánh dự án (VD: AGV300_Demo)
+git checkout -f AGV300_Demo
 
-# Bước 2: Chuyển sang nhánh dự án (VD: AGV300_Demo)
-git checkout AGV300_Demo
-
-# Bước 3: Kéo bản mới nhất từ GitHub về
+# Bước 2: Kéo bản mới nhất từ GitHub về
 git pull
 
-# Bước 4: Tải file thật .qet / .xlsx (Git LFS)
+# Bước 3: Tải file thật .qet / .xlsx (Git LFS)
 git lfs pull
 ```
 
 **Giải thích:**
-- `git checkout <tên>` — chuyển sang nhánh của dự án
-- `git stash` — cất tạm thay đổi chưa commit (có thể lấy lại sau bằng `git stash pop`)
+- `git checkout -f <tên>` — chuyển sang nhánh của dự án, `-f` (force) vì các orphan branch có cấu trúc thư mục khác nhau, cần force để ghi đè
 - `git pull` — tải commit mới nhất từ GitHub
 - `git pull` — tải commit mới nhất từ GitHub
 - `git lfs pull` — Git LFS lưu file .qet dưới dạng link text, cần lệnh này để tải file thật
