@@ -482,22 +482,55 @@ main:     A --- B --- X --- Y --- C
 
 > **Khuyến nghị:** dùng **Squash and merge** cho PR nhỏ (1 tính năng = 1 commit sạch), **Create a merge commit** cho PR lớn nhiều người cùng làm.
 
-### 2.9. Xóa feature branch sau khi merge
+### 2.9. Đồng bộ local sau khi merge trên GitHub
 
-Sau khi merge xong (bằng cách nào), xóa branch feature:
+**Vấn đề:** Anh merge PR trên GitHub xong, nhưng máy local vẫn ở feature branch cũ, file vẫn là bản cũ → tưởng mất file.
+
+**Nguyên nhân:** Merge chỉ xảy ra trên GitHub. Local không tự động cập nhật.
+
+**Các bước đồng bộ:**
+
+```bash
+# Bước 1: Xem đang ở nhánh nào
+git branch
+# (*) feature/Update-ban-ve — tức là vẫn ở feature branch
+
+# Bước 2: Nếu có thay đổi chưa commit → cất tạm
+git stash
+
+# Bước 3: Chuyển về nhánh dự án (VD: AGV_300QR)
+git checkout -f AGV_300QR
+
+# Bước 4: Lấy bản mới từ GitHub (đã có merge)
+git pull
+
+# Bước 5: Tải file thật .qet / .xlsx
+git lfs pull
+
+# Bước 6: Kiểm tra file đã có chưa
+dir "Projects/AGV_300QR/02_Design/electrical/"
+```
+
+**Sau bước này, local và GitHub giống hệt nhau.**
+
+> **Mẹo:** Khi merge xong trên GitHub, trên web sẽ hiện nút xám **"Delete branch"** — bấm luôn để xóa feature branch trên GitHub.  
+> Trên local: `git branch -d feature/Update-ban-ve` và `git push origin --delete feature/Update-ban-ve`.
+
+### 2.10. Xóa feature branch sau khi merge
+
+Sau khi đồng bộ local xong (mục 2.9), xóa feature branch để dọn dẹp:
 
 ```bash
 # Xóa local
-git checkout <ten-du-an>
 git branch -d feature/<ten-tinh-nang>
 
-# Xóa trên GitHub
+# Xóa trên GitHub (nếu chưa bấm "Delete branch" trên web)
 git push origin --delete feature/<ten-tinh-nang>
 ```
 
 Hoặc trên GitHub: sau khi merge → nút **"Delete branch"** (xám, xuất hiện ngay dưới nút merge).
 
-### 2.10. Hủy PR mà không merge
+### 2.11. Hủy PR mà không merge
 
 Trên trang Pull Request → kéo xuống cuối → bấm **"Close pull request"**.
 
@@ -508,7 +541,7 @@ git push origin --delete feature/<ten-tinh-nang>
 git branch -d feature/<ten-tinh-nang>
 ```
 
-### 2.11. Tag release
+### 2.12. Tag release
 
 ```bash
 git checkout <ten-du-an>

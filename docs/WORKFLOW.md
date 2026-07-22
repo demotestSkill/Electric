@@ -69,9 +69,14 @@ main                    (templates, docs, shared)
          │  SAI   │       │  ĐÚNG    │
          └───┬────┘       └────┬─────┘
              ↓                 ↓
-   Engineer sửa lại      Admin Merge PR
-   → commit → push        → chọn kiểu merge
-   → cập nhật PR           → xóa feature branch
+    Engineer sửa lại      Admin Merge PR (trên GitHub)
+    → commit → push        → chọn kiểu merge
+    → cập nhật PR           → xóa feature branch (nút "Delete branch")
+    
+                           Sau đó đồng bộ local:
+                           → git checkout -f <dự-án>
+                           → git pull + git lfs pull
+                           → git branch -d feature/xyz
 ```
 
 ## 4. Phân vai
