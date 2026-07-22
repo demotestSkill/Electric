@@ -84,8 +84,8 @@ Tải về → cài đặt (next hết, để mặc định).
 Sau khi cài, mở **Git Bash** (tìm trong Start Menu) hoặc **PowerShell** chạy:
 
 ```bash
-git config --global user.name "DungAGV"
-git config --global user.email "trungdung651997@gmail.com"
+git config --global user.name "TenCuaAnh"
+git config --global user.email "email@example.com"
 ```
 
 ### B. Clone repo về máy (lần đầu)
@@ -95,7 +95,7 @@ git config --global user.email "trungdung651997@gmail.com"
 D:
 cd D:\Projects
 
-git clone https://github.com/duz9x/Electric.git
+git clone https://github.com/demotestSkill/Electric.git
 cd Electric
 
 git lfs pull    # Tải file .qet thật (không chỉ link)
@@ -226,7 +226,7 @@ Enginner **không** tự merge được, cần admin (anh) hoặc reviewer Appro
 
 ## Lưu ý đặc thù dự án này
 
-### 1. Chuyển nhánh dự án phải dùng `-f`
+### 1. Chuyển nhánh dự án
 
 Vì mỗi dự án là **orphan branch** (nhánh độc lập, không chung lịch sử), nên khi chuyển từ `main` sang `AGV300_Demo` (hoặc ngược lại), Git báo lỗi:
 
@@ -237,14 +237,31 @@ error: The following untracked working tree files would be overwritten by checko
 Please move or remove them before you switch branches.
 ```
 
-**Fix: dùng force checkout**
+**Cách xử lý đúng (an toàn):**
 
 ```bash
-git checkout -f AGV300_Demo
+# Bước 1: Commit hết thay đổi hiện tại
+git add <file>
+git commit -m "[...] Tạm thời"
+
+# Bước 2: Chuyển nhánh bình thường (không cần -f)
+git checkout AGV300_Demo
 git lfs pull
 ```
 
-Luôn dùng `-f` khi chuyển giữa `main` và các nhánh dự án.
+**Nếu chưa muốn commit, có thể cất tạm:**
+
+```bash
+git stash                        # Cất thay đổi vào kho
+git checkout AGV300_Demo
+git lfs pull
+# ... làm việc khác ...
+git checkout <nhánh-cũ>
+git stash pop                    # Lấy lại thay đổi
+```
+
+> **Chỉ dùng `-f` (force) khi thực sự cần — ví dụ đã kiểm tra và chấp nhận mất thay đổi.**
+> `-f` sẽ âm thầm xóa file thay đổi chưa commit nếu quên save trước đó.
 
 ### 2. Git LFS là gì?
 
@@ -266,7 +283,7 @@ size 55498236
 Khi clone repo, phải cd vào thư mục vừa clone rồi mới làm việc:
 
 ```
-D:\Projects> git clone https://github.com/duz9x/Electric.git
+D:\Projects> git clone https://github.com/demotestSkill/Electric.git
 D:\Projects> cd Electric          ← vào đây
 D:\Projects\Electric> git checkout -f AGV300_Demo
 ```
@@ -286,7 +303,7 @@ rmdir /s Electric
 
 | Lỗi | Nguyên nhân | Cách sửa |
 |-----|-------------|----------|
-| `untracked working tree files would be overwritten` | Chuyển nhánh giữa orphan branch | `git checkout -f <nhánh>` |
+| `untracked working tree files would be overwritten` | Chuyển nhánh giữa orphan branch | `git stash` → `git checkout <nhánh>` → `git stash pop` (hoặc commit rồi checkout) |
 | `git` not recognized | Chưa cài Git | Cài https://git-scm.com/ |
 | `git lfs: command not found` | Chưa cài Git LFS | `git lfs install` hoặc cài lại Git |
 | File `.qet` chỉ có vài dòng text | Chưa `git lfs pull` | `git lfs pull` |
@@ -299,4 +316,4 @@ rmdir /s Electric
 2. **Commit thường xuyên**: Mỗi lần sửa xong một việc nhỏ → commit
 3. **Không sợ sai**: Trước khi làm thử nghiệm, tạo feature branch, nếu hỏng thì xóa nhánh đó đi
 4. **Luôn `git lfs pull`** sau mỗi lần checkout để có file thật
-5. **Dùng `-f`** khi checkout giữa các nhánh dự án
+5. **Dùng `git stash` hoặc commit** trước khi chuyển nhánh, tránh `-f` nếu không cần thiết

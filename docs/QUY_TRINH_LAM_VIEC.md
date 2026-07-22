@@ -63,6 +63,24 @@ Git LFS (Large File Storage) dùng cho file lớn như: `.qet`, `.xlsx`, `.pdf`,
 - File `.qet` chỉ nặng 200 byte (không mở được QET)
 - File `.xlsx` chỉ nặng 200 byte (không mở được Excel)
 
+**Git LFS Lock — khóa file để không ai sửa cùng lúc:**
+
+Vì file .qet là nhị phân, không merge tự động được → cần tránh 2 người sửa cùng file.
+
+```bash
+# Khóa file .qet trước khi sửa (người khác sẽ không sửa được)
+git lfs lock "Projects/AGV300_Demo/02_Design/electrical/1.AGV300-Demo-full_ver1.qet"
+
+# Sau khi sửa xong, commit + unlock
+git lfs unlock "Projects/AGV300_Demo/02_Design/electrical/1.AGV300-Demo-full_ver1.qet"
+
+# Xem ai đang giữ khóa
+git lfs locks
+```
+
+> **Cách dùng:** Ai muốn sửa file .qet → `git lfs lock` trước → sửa → commit → `git lfs unlock`.
+> Nếu file đã bị khóa bởi người khác → không lock được → phải chờ họ unlock.
+
 ### 0.7. Pull Request (PR) là gì?
 PR là **đơn xin gộp code**. Khi anh làm xong trên feature branch:
 1. Push lên GitHub
@@ -122,7 +140,7 @@ Admin (Anh)
 ### Quy tắc (Branch Protection)
 - **Không ai** (kể cả Write) push thẳng vào nhánh dự án (`AGV300_Demo`, `AGV_300QR`...)
 - **Bắt buộc** tạo feature branch → PR → Approve → merge
-- Admin có thể bypass (push thẳng) khi cần
+- Admin có thể bypass (push thẳng) khi cần — **chỉ nên dùng trong trường hợp khẩn cấp**, vì làm yếu chính cơ chế review. Nếu có 2+ admin, nên bật "Do not allow bypassing the above settings" trong Branch Protection.
 
 ### 1.1. Cài đặt phân quyền trên GitHub Web
 
@@ -202,18 +220,24 @@ Trước khi làm, phải lấy bản mới nhất từ GitHub về để không
 **Các lệnh:**
 
 ```bash
-# Bước 1: Chuyển sang nhánh dự án (VD: AGV300_Demo)
-git checkout -f AGV300_Demo
+# Bước 1: Commit hoặc cất tạm thay đổi hiện tại (nếu có)
+git status
+# Nếu có file chưa commit → git add + git commit, hoặc git stash
 
-# Bước 2: Kéo bản mới nhất từ GitHub về
+# Bước 2: Chuyển sang nhánh dự án (VD: AGV300_Demo)
+git checkout AGV300_Demo
+
+# Bước 3: Kéo bản mới nhất từ GitHub về
 git pull
 
-# Bước 3: Tải file thật .qet / .xlsx (Git LFS)
+# Bước 4: Tải file thật .qet / .xlsx (Git LFS)
 git lfs pull
 ```
 
 **Giải thích:**
-- `git checkout -f <tên>` — chuyển sang nhánh của dự án, `-f` (force) để ghi đè file nếu có xung đột
+- `git checkout <tên>` — chuyển sang nhánh của dự án
+- `git stash` — cất tạm thay đổi chưa commit (có thể lấy lại sau bằng `git stash pop`)
+- `git pull` — tải commit mới nhất từ GitHub
 - `git pull` — tải commit mới nhất từ GitHub
 - `git lfs pull` — Git LFS lưu file .qet dưới dạng link text, cần lệnh này để tải file thật
 

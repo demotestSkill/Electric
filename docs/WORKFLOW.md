@@ -107,8 +107,13 @@ Thêm thành viên: **Settings → Collaborators → Add people** → chọn rol
 
 ### 5.3. File .qet (Quan trọng)
 - File `.qet` là XML nhị phân qua Git LFS → **không merge tự động** được
-- Không để 2 người sửa cùng file .qet trên 2 nhánh cùng lúc
-- Conflict → giữ 1 bản, bỏ bản kia, làm lại thay đổi
+- **Dùng `git lfs lock`** trước khi sửa file .qet để khóa, người khác không sửa được cùng lúc
+  ```bash
+  git lfs lock "Projects/AGV300_Demo/02_Design/electrical/1.AGV300-Demo-full_ver1.qet"
+  # ... sửa file ...
+  git lfs unlock "Projects/AGV300_Demo/02_Design/electrical/1.AGV300-Demo-full_ver1.qet"
+  ```
+- Nếu quên lock và bị conflict → giữ 1 bản, bỏ bản kia, làm lại thay đổi
 
 ### 5.4. Pull Request
 - PR phải được tạo trước khi merge
