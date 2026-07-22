@@ -124,6 +124,65 @@ Admin (Anh)
 - **Bắt buộc** tạo feature branch → PR → Approve → merge
 - Admin có thể bypass (push thẳng) khi cần
 
+### 1.1. Cài đặt phân quyền trên GitHub Web
+
+#### Bước 1 — Thêm thành viên (Collaborators)
+
+1. Vào repo → **Settings** (tab trên cùng, gần cuối)
+2. Bên trái → **Collaborators** (nhóm **Access**)
+3. Bấm nút xanh **"Add people"**
+4. Gõ tên GitHub của người cần thêm (VD: `engineer-account`)
+5. Chọn quyền:
+   - **Write** — có thể push feature branch, tạo PR (dành cho Engineer)
+   - **Read** — chỉ xem, không sửa (dành cho người ngoài)
+6. Bấm **"Add <tên> to this repository"**
+
+> Người được mời sẽ nhận email thông báo. Cần accept invitation thì mới có quyền.
+
+#### Bước 2 — Tạo Branch Protection (chặn push thẳng)
+
+1. Vào repo → **Settings** → **Branches** (nhóm **Code and automation**)
+2. Bên cạnh **Branch protection rules** → bấm **"Add branch protection rule"**
+3. **Branch name pattern**: gõ tên nhánh dự án (VD: `AGV300_Demo`)
+4. Tích chọn các ô sau:
+
+| Ô | Tác dụng |
+|---|----------|
+| ☑ **Require a pull request before merging** | Bắt buộc PR trước khi merge |
+| ☑ **Require approvals** → để `1` | Cần ít nhất 1 người approve |
+| ☑ **Dismiss stale pull request approvals when new commits are pushed** | Khi có commit mới, phải approve lại |
+| ☑ **Require status checks to pass before merging** (nếu có CI) | Tự động kiểm tra trước merge |
+| ☐ **Allow specified actors to bypass** (bỏ trống) | Admin vẫn allowed, muốn chặn cả admin → tạm thời không cần |
+
+5. Bấm nút xanh **"Create"** (hoặc **"Save changes"**)
+
+> **Lưu ý:** Admin vẫn bypass được rule này. Muốn chặn admin → tích "Do not allow bypassing the above settings". Chỉ nên làm khi có 2+ admin.
+
+#### Bước 3 — Lặp lại cho mỗi nhánh dự án
+
+Làm tương tự cho các nhánh:
+- `AGV300_Demo`
+- `AGV_300QR`
+- `AGV1000`
+- `AGV1000_Demo`
+- `Robot_DichVu`
+- `Robot_AnNinh`
+
+#### Bước 4 — Kiểm tra
+
+Đăng nhập tài khoản **Write** → thử push thẳng vào nhánh dự án:
+
+```bash
+git checkout AGV300_Demo
+echo "test" > test.txt
+git add test.txt
+git commit -m "test"
+git push
+# → Sẽ báo lỗi: ! [remote rejected] (protected branch)
+```
+
+Đúng vậy — branch protection đang hoạt động. Phải tạo feature branch → PR.
+
 ---
 
 ## 2. Hướng dẫn chi tiết từng bước

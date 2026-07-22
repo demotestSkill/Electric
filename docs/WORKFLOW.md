@@ -87,6 +87,18 @@ main                    (templates, docs, shared)
 - **feature/***: tạo từ nhánh dự án, xóa sau khi merge
 - **Không push thẳng** vào nhánh dự án (branch protection)
 
+### 5.1a. Cài đặt Branch Protection trên GitHub Web
+
+1. Vào repo → **Settings** → **Branches**
+2. **Add branch protection rule** → gõ tên nhánh (VD: `AGV300_Demo`)
+3. Tích:
+   - ☑ **Require a pull request before merging**
+   - ☑ **Require approvals** → `1`
+4. Bấm **Create**
+
+Làm lại cho mỗi nhánh dự án.  
+Thêm thành viên: **Settings → Collaborators → Add people** → chọn role **Write**.
+
 ### 5.2. Commit
 - Format: `[Tên-Dự-Án] Mô tả ngắn gọn`
 - VD: `[AGV300_Demo] Thêm pin dự phòng 24V-20Ah`
