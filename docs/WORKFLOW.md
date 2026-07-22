@@ -88,6 +88,12 @@ main                    (templates, docs, shared)
 - **Nhánh dự án** (`AGV300_Demo`, ...): luôn ổn định, đã được review
 - **feature/***: tạo từ nhánh dự án, xóa sau khi merge
 - **Không push thẳng** vào nhánh dự án (branch protection)
+- **Đặt tên:** `feature/<mô-tả>`, dùng `-` hoặc `_` nối từ, **không dấu cách**, **không gõ `<` `>`**
+
+| Đúng | Sai |
+|------|-----|
+| `feature/Update-ban-ve` | `feature/<Update ban ve>` |
+| `feature/fix-trailer` | `feature/Cập nhật bản vẽ` (có dấu cách)
 
 ### 5.1a. Cài đặt Branch Protection trên GitHub Web
 

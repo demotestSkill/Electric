@@ -254,6 +254,11 @@ feature/<ngắn-gọn-mô-tả>
 
 VD: `feature/add-battery`, `feature/fix-trailer`, `feature/update-bom`
 
+> **Lưu ý:** `<...>` là ký hiệu placeholder — **không gõ dấu `<` `>`** vào lệnh.  
+> Tên branch **không được có dấu cách** — dùng `-` hoặc `_` để nối từ.  
+> VD đúng: `feature/Update-ban-ve`  
+> VD sai: `feature/<Update ban ve>` ✗
+
 **Các lệnh:**
 
 ```bash

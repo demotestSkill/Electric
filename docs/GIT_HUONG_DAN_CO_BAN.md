@@ -121,7 +121,9 @@ git lfs pull
 
 ```bash
 # Bước 4: Tạo nhánh riêng cho tính năng mới
-# Tên nhánh nên có ý nghĩa: feature/<tên-ngắn>
+# Tên nhánh nên có ý nghĩa, dùng - để nối từ
+# ĐÚNG: feature/Update-ban-ve
+# SAI:  feature/<Update ban ve>  (không gõ < > và không có dấu cách)
 git checkout -b feature/add-battery
 
 # Bước 5: Mở QET, sửa file
